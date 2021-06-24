@@ -49,7 +49,7 @@ func (t Tenant) NewFileUploadRequest(uri string, params map[string]string, param
 		return
 	}
 	str := (*string)(unsafe.Pointer(&respBytes))
-	fmt.Println(*str)
+//	fmt.Println(*str)
 	return *str, nil
 }
 

@@ -118,7 +118,7 @@ func PostRequest(url string, body string, headerOptions ...HeaderOption) (string
 }
 
 func Post(url string, params map[string]interface{}, body string, headerOptions ...HeaderOption) (string, error) {
-	log.InfoF("请求body %s", body)
+	// log.InfoF("请求body %s", body)
 
 	fullUrl := url + ConvertToQueryParams(params)
 	return PostRequest(fullUrl, body, headerOptions...)
@@ -171,7 +171,7 @@ func responseHandle(resp *http.Response, err error) (string, error) {
 		return "", err
 	}
 	respBody := string(b)
-	log.InfoF("api %s 响应结果: %s", resp.Request.URL, respBody)
+	//log.InfoF("api %s 响应结果: %s", resp.Request.URL, respBody)
 	return respBody, nil
 }
 
